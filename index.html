@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/667417c7ec.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background: #ddd; */
+        }
+        
+        .text-typing {
+            /* background: #413f3f; */
+            font-size: 35px;
+            font-family: 'Lobster', 'cursive';
+            border-radius: 50px;
+        }
+        
+        .text-typing p {
+            /* margin: 0px; */
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(22, end) forwards, blink 1s infinite;
+        }
+        
+        @keyframes typing {
+            0% {
+                width: 0%
+            }
+            100% {
+                width: 100%
+            }
+        }
+        /*         
+        @keyframes blink {
+            0%,
+            100% {
+                border-right: 2px solid transparent;
+            }
+            50% {
+                border-right: 2px solid #222;
+            }
+        } */
+        
+        html {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: url("https://source.unsplash.com/1800x600/?website");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: darken;
+        }
+        
+        body {
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            font-family: 'Pacifico', cursive;
+        }
+        
+        .menu {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.43);
+            box-shadow: 0 0 10px black;
+            list-style-type: none;
+            margin: 0;
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .menu a {
+            text-decoration: none;
+            margin: 5px 10px;
+            font-size: 20px;
+        }
+        
+        .menu a:hover {
+            color: gray;
+        }
+        
+        .container {
+            background-color: rgba(0, 0, 0, 0.43);
+            margin: 9vh auto;
+            padding: 10px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 10px black;
+        }
+        
+        .container h2 {
+            color: whitesmoke;
+            font-weight: 900;
+            font-size: 40px;
+        }
+        
+        .container h3 {
+            color: rgb(214, 194, 16);
+            font-weight: 500;
+            font-size: 25px;
+        }
+        
+        .data {
+            font-size: smaller;
+        }
+        /* .container p {
+              color: rgb(31, 30, 30);
+              font-weight: 400;
+              font-size: 20px;
+          }
+           */
+        
+        .form-item {
+            display: flex;
+            flex-direction: column;
+            margin: 8px;
+        }
+        
+        input[type="email"] {
+            width: 80%;
+            font-size: 17px;
+            margin: 5px auto;
+            border-radius: 5px;
+            border: none;
+            padding: 5px 10px;
+        }
+        
+        input[type="submit"] {
+            width: 20%;
+            font-size: 18px;
+            margin: 5px auto;
+            padding: 5px 10px;
+            background-color: #4f2ba8;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .follow-us {
+            margin: 20px auto;
+        }
+        
+        a {
+            color: white;
+        }
+        
+        i {
+            font-size: 40px;
+            margin: 5px;
+        }
+        
+        .footer {
+            font-size: 15px !important;
+        }
+        
+        .ham {
+            position: absolute;
+            right: 25px;
+            top: 18px;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .ham:hover .bar {
+            background-color: grey;
+        }
+        
+        .bar {
+            width: 35px;
+            height: 3px;
+            /* background-color: white; */
+            margin: 3px;
+            border-radius: 5px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .ham {
+                display: block;
+            }
+            .menu {
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                top: 50px;
+                right: 0;
+                flex-direction: column;
+                width: 200px;
+                min-width: 30vw;
+                text-align: end;
+                background-color: #2f1f49bf;
+                border-radius: 15px;
+                display: none;
+                transition: all 0.03s ease;
+            }
+            .show {
+                display: block;
+            }
+            .container {
+                width: 90vw;
+            }
+            .text-typing {
+                height: 10vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="text-typing">
+        <p>Welcome to codingflag&nbsp;</p>
+    </div> -->
+    <div class="background"></div>
+    <header>
+        <!-- <div class="nav-bar">
+            <ul class="menu">
+                <a href="#">
+                    <li class="items">Home</li>
+                </a>
+                <a href="#">
+                    <li class="items">About Us</li>
+                </a>
+                <a href="#">
+                    <li class="items">Contact Us</li>
+                </a>
+            </ul>
+        </div> -->
+        <!-- <div class="ham">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div> -->
+    </header>
+    <div class="container">
+        <h2 class="text-typing">
+            <p>Zentec Technologies</p>
+            <h3>
+                <p>coming soon..</p>
+            </h3>
+        </h2>
+        <p>
+            An awesome platform to share & contact our Developers Team and request to make web apps awesome .
+        </p>
+        <p>
+            you get hassle-free consultation, the latest technology adoption & complete peace of mind!
+        </p>
+        <!-- <form action="">
+            <div class="form-item">
+                <input type="email" name="email" id="email" placeholder="Enter Your Email Here" /> -->
+        <a href="/index.html"><input class="container" type="submit" value="Notify Me" /></a>
+        <!-- </div>
+        </form> -->
+        <p>Follow us on</p>
+        <div class="follow-us">
+            <a href="https://www.facebook.com/profile.php?id=100074886453578"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.linkedin.com/in/rohan-maindarkar-b45000227/"><i class="fa fa-linkedin-square"></i></a>
+        </div>
+        <p class="data">by mybusiness Developers</p>
+        <p class="footer">Copyright &copy; zentec technologies.com @2022</p>
+    </div>
+    <script>
+        let ham = document.querySelector(".ham");
+        let menu = document.querySelector(".menu");
+
+        ham.addEventListener("click", () => {
+            menu.classList.toggle("show");
+        });
+    </script>
+</body>
+
+</html>
+
+</html>
